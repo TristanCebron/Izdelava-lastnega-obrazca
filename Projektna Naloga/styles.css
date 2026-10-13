@@ -1,268 +1,302 @@
-
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    padding: 0;
     background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-#glav_slika{
+/* LOGO */
+#glav_slika {
+    display: block;
+    width: 200px;
     height: 80px;
-    margin-left: 40%;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
+    object-fit: contain;
+    margin: 18px auto 30px;
 }
 
-
+/* SIGN UP OKVIR */
 #glavni {
-    background-color: white;
-    width: 286px;
-    padding: 20px;
+    width: 430px;
+    max-width: calc(100% - 24px);
+    padding: 32px;
     margin: auto;
-    border: 1px solid #eeeeee;
-    box-shadow: 0 1px 3px #dddddd;
+    background-color: white;
+    box-shadow: 0 1px 4px #d6d6d6;
 }
-
 
 #sign_text {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     text-align: center;
-    margin: 2px 0 22px;
+    margin: 0 0 24px;
 }
 
-
-#steam, #face, #goog {
-    height: 39px;
-    line-height: 39px;
-    padding-left: 16px;
-    font-size: 10px;
+/* SOCIALNI GUMBI */
+.social {
+    width: 100%;
+    height: 48px;
+    display: block;
+    margin-bottom: 12px;
+    padding-left: 17px;
+    text-align: left;
+    font-size: 13px;
     font-weight: bold;
-    margin: 0 0 11px;
     cursor: pointer;
+    border: none;
 }
 
-#steam {
-    background-color: #53565a;
-    color: white;
-}
-
-#face {
-    background-color: #4267b2;
-    color: white;
-}
-
-#goog {
-    background-color: white;
-    color: #333;
-    border: 1px solid #53565a;
-    margin-bottom: 0;
-}
-
-#steam i, #face i {
-    font-size: 17px;
-    margin-right: 11px;
+.social i,
+.google-icon {
+    display: inline-block;
+    width: 28px;
+    font-size: 18px;
     vertical-align: middle;
 }
 
-.google-icon {
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 11px;
-    color: #4285f4;
-}
+#steam { background-color: #53565a; color: white; }
+#face { background-color: #4267b2; color: white; }
+#goog { background-color: white; color: #333; border: 1px solid #53565a; }
+.google-icon { color: #4285f4; font-weight: bold; }
 
 #or {
-    text-align: center;
-    font-size: 10px;
-    margin: 24px 0;
     display: flex;
     align-items: center;
     gap: 14px;
+    margin: 28px 0;
+    font-size: 12px;
+    text-align: center;
 }
 
-#or:before, #or:after {
+#or::before, #or::after {
     content: "";
     height: 1px;
-    background-color: #e5e5e5;
     flex: 1;
+    background-color: #e5e5e5;
 }
 
+/* POLJA */
 .input {
+    display: block;
     width: 100%;
-    height: 36px;
-    border: 1px solid #999;
-    padding-left: 11px;
-    font-size: 11px;
-    margin-bottom: 11px;
+    height: 54px;
+    border: 2px solid #999;
+    padding: 0 16px;
+    font-size: 15px;
+    margin-top: 16px;
     outline: none;
 }
 
-.input.red {
-    border: 1px solid #ff2635;
-}
-
-.input::placeholder {
-    color: #606a79;
-}
+.input::placeholder { color: #677284; }
+.input:focus { border-color: #6cac37; }
+.input.red { border-color: #e00010; }
 
 small {
     display: block;
-    font-size: 9px;
-    color: #ed8991;
-    margin-top: -5px;
-    margin-bottom: 11px;
+    color: #ef7b85;
+    font-size: 12px;
+    margin-top: 8px;
+    line-height: 1.4;
 }
 
-.space {
-    margin-bottom: 26px;
-}
+small:empty { display: none; }
 
+.space { margin-top: 30px; }
+
+/* MOČ GESLA */
 .strength {
     display: flex;
     gap: 4px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 40px;
 }
 
-.strength hr {
-    width: 20%;
-    margin: 0;
-    border: none;
-    border-top: 2px solid #dddddd;
+.strength span {
+    flex: 1;
+    height: 3px;
+    background-color: #ddd;
 }
 
+.strength span.active { background-color: #64aa34; }
+
+/* POGOJI UPORABE */
 .remember {
     display: flex;
     align-items: center;
-    gap: 11px;
-    margin-top: 17px;
-    margin-bottom: 25px;
+    gap: 16px;
+    margin-top: 46px;
+    margin-bottom: 37px;
 }
 
 .remember-text {
-    font-size: 9px;
-    line-height: 12px;
+    font-size: 12px;
+    line-height: 19px;
 }
+
+.remember-text a {
+    color: #687586;
+    text-decoration: none;
+}
+
+.remember-text a:hover { color: #64a62f; text-decoration: underline; }
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 34px;
-    min-width: 34px;
-    height: 18px;
+    width: 51px;
+    min-width: 51px;
+    height: 27px;
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
+.switch input { opacity: 0; width: 0; height: 0; }
 
 .slider {
     position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ffcbd6;
+    border-radius: 20px;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ffc5d1;
-    transition: .4s;
+    transition: .2s;
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 14px;
-    width: 14px;
-    left: 3px;
-    bottom: 2px;
-    background-color: #ff6689;
-    transition: .4s;
-}
-
-input:checked + .slider {
-    background-color: #b9dc9b;
-}
-
-input:checked + .slider:before {
-    background-color: #84c24f;
-    transform: translateX(14px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
+    width: 20px; height: 20px;
+    left: 4px; bottom: 3px;
+    background-color: #ff6388;
     border-radius: 50%;
+    transition: .2s;
 }
 
+.switch input:checked + .slider { background-color: #b6dc9c; }
+.switch input:checked + .slider:before { background-color: #75bc42; transform: translateX(23px); }
+.switch input:focus-visible + .slider { outline: 2px solid #6ba539; outline-offset: 3px; }
 
+#terms-error { margin: -26px 0 25px; }
+
+/* SIGN UP */
 #signup {
     display: block;
-    background-color: #63ae36;
+    margin: 0 auto;
+    padding: 14px 17px;
+    background-color: #65ad36;
     color: white;
+    font-size: 15px;
     border: none;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 10px 12px;
-    margin: auto;
     cursor: pointer;
+    box-shadow: 0 2px 4px #d2d2d2;
 }
 
+#signup:hover { background-color: #51952a; }
 
-#captcha {
-    display: flex;
-    width: 172px;
-    height: 42px;
-    margin: 10px auto 0;
-    border: 1px solid #dddddd;
-    box-shadow: 0 1px 2px #dddddd;
-}
-
-#captcha-text {
-    background-color: #1a73e8;
-    color: white;
-    font-size: 9px;
-    font-weight: bold;
-    padding: 10px 7px;
-    width: 125px;
-}
-
-#captcha-logo {
+#message {
+    font-size: 12px;
     text-align: center;
-    font-size: 34px;
-    color: #777;
-    width: 45px;
+    color: #4b9c25;
+    margin: 12px 0 0;
 }
 
+#message:empty { display: none; }
 
+/* SPODNJA PRIJAVA */
 #bottom {
-    width: 286px;
-    margin: 23px auto;
+    width: 430px;
+    max-width: calc(100% - 24px);
     display: flex;
+    gap: 20px;
     align-items: center;
-    gap: 12px;
+    margin: 35px auto 0;
 }
 
 #bottom hr {
     flex: 1;
+    min-width: 0;
     border: none;
-    border-top: 1px solid #dddddd;
+    border-top: 1px solid #ddd;
 }
 
-#bottom button {
-    background-color: #63ae36;
+#bottom a {
+    display: block;
+    background-color: #65ad36;
     color: white;
-    border: none;
-    padding: 6px 10px;
-    font-size: 9px;
-    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 10px 24px;
     white-space: nowrap;
-    cursor: pointer;
+    text-align: center;
+}
+
+#bottom a:hover { background-color: #51952a; }
+
+/* FOOTER - BELO, OB HOVER ZELENO */
+#footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 50px auto 65px;
+}
+
+#footer-links a,
+#eu-text a {
+    color: white;
+    text-decoration: none;
+    transition: color .15s;
+}
+
+#footer-links a { font-size: 14px; }
+
+#footer-links a:hover,
+#footer-links a:focus-visible,
+#eu-text a:hover,
+#eu-text a:focus-visible {
+    color: #62a92f;
+    text-decoration: underline;
+}
+
+#europe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#europe img {
+    width: 160px;
+    height: 107px;
+    object-fit: cover;
+}
+
+#eu-text {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+#eu-text a {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#copyright {
+    font-size: 12px;
+    text-align: center;
+    margin: 70px 12px 22px;
+}
+
+@media (max-width: 480px) {
+    #glavni { padding: 22px; }
+    .input { height: 42px; font-size: 12px; }
+    .social { height: 40px; font-size: 11px; }
+    #europe { gap: 12px; }
+    #europe img { width: 120px; height: 80px; }
+    #eu-text { gap: 14px; }
+    #eu-text a { font-size: 10px; }
+    #footer-links { gap: 16px; }
+    #footer-links a { font-size: 12px; }
+    #bottom { gap: 8px; }
+    #bottom a { font-size: 10px; padding: 10px 12px; }
 }

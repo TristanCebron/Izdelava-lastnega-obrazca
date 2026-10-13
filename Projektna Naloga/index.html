@@ -3,68 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bohemia Interactive - Sign Up (School Project)</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <img id="glav_slika" src="slike/bi-logo-rainbow-black-RGB.svg">
+
+    <img id="glav_slika" src="slike/bi-logo-rainbow-black-RGB.svg" alt="Bohemia Interactive">
 
     <div id="glavni">
-
         <p id="sign_text">Create new Account</p>
 
-        <p id="steam"><i class="fa-brands fa-steam"></i> Sign in with Steam</p>
-
-        <p id="face"><i class="fa-brands fa-facebook"></i> Sign in with Facebook</p>
-
-        <p id="goog"><span class="google-icon">G</span> Sign in with Google</p>
+        <button id="steam" class="social" type="button"><i class="fa-brands fa-steam"></i> Sign in with Steam</button>
+        <button id="face" class="social" type="button"><i class="fa-brands fa-facebook"></i> Sign in with Facebook</button>
+        <button id="goog" class="social" type="button"><span class="google-icon">G</span> Sign in with Google</button>
 
         <p id="or">OR</p>
 
-        <input class="input red" type="text" placeholder="Nickname">
-        <small>The nickname field is required.</small>
+        <form id="registration" novalidate>
+            <input class="input" id="nickname" name="nickname" type="text" placeholder="Nickname" autocomplete="username" required>
+            <small id="nickname-error"></small>
 
-        <input class="input" type="email" placeholder="E-mail">
-        <small>The e-mail field is required.</small>
+            <input class="input" id="email" name="email" type="email" placeholder="E-mail" autocomplete="email" required>
+            <small id="email-error"></small>
 
-        <input class="input red space" type="email" placeholder="E-mail Confirmation">
+            <input class="input space" id="email2" name="email2" type="email" placeholder="E-mail Confirmation" autocomplete="off" required>
+            <small id="email2-error"></small>
 
-        <input class="input" type="password" placeholder="Password">
+            <input class="input" id="password" name="password" type="password" placeholder="Password" autocomplete="new-password" minlength="8" required>
+            <small id="password-error"></small>
 
-        <div class="strength">
-            <hr><hr><hr><hr><hr>
-        </div>
-
-        <input class="input red" type="password" placeholder="Password Confirmation">
-
-        <div class="remember">
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-
-            <span class="remember-text">
-                By creating a Bohemia Interactive Account,
-                you accept the User Agreement & Privacy Policy.
-            </span>
-        </div>
-
-        <button id="signup">SIGN UP</button>
-
-        <div id="captcha">
-            <div id="captcha-text">
-                zaščiteno s preverjanjem<br>
-                reCAPTCHA
+            <div class="strength" aria-label="Password strength">
+                <span></span><span></span><span></span><span></span><span></span>
             </div>
-            <div id="captcha-logo">↻</div>
-        </div>
 
+            <input class="input" id="password2" name="password2" type="password" placeholder="Password Confirmation" autocomplete="new-password" required>
+            <small id="password2-error"></small>
+
+            <div class="remember">
+                <label class="switch" aria-label="Accept the terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <span class="slider round"></span>
+                </label>
+                <span class="remember-text">
+                    By creating a Bohemia Interactive Account,<br>
+                    you accept the
+                    <a href="https://accounts.bistudio.com/terms-and-conditions" target="_blank" rel="noopener noreferrer">User Agreement</a>
+                    &amp;
+                    <a href="https://www.bohemia.net/en/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+                </span>
+            </div>
+            <small id="terms-error"></small>
+
+            <button id="signup" type="submit">SIGN UP</button>
+            <p id="message" role="status" aria-live="polite"></p>
+        </form>
     </div>
 
     <div id="bottom">
         <hr>
-        <button>ALREADY HAVE AN ACCOUNT?</button>
+        <a href="https://accounts.bistudio.com/auth/login">ALREADY HAVE AN ACCOUNT?</a>
         <hr>
     </div>
+
+    <footer>
+        <div id="footer-links">
+            <a href="https://old.bohemia.net/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
+            <a href="https://accounts.bistudio.com/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
+            <a href="https://www.bohemia.net/en/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </div>
+
+        <div id="europe">
+            <img src="slike/eu-flag.svg" alt="European Union flag">
+            <div id="eu-text">
+                <a href="https://european-union.europa.eu/" target="_blank" rel="noopener noreferrer">EVROPSKÁ UNIE</a>
+                <a href="https://ec.europa.eu/regional_policy/" target="_blank" rel="noopener noreferrer">Evropský fond pro regionální rozvoj</a>
+                <a href="https://www.dotaceeu.cz/" target="_blank" rel="noopener noreferrer">Operační program Podnikání</a>
+                <a href="https://www.dotaceeu.cz/" target="_blank" rel="noopener noreferrer">a inovace pro konkurenceschopnost</a>
+            </div>
+        </div>
+
+        <p id="copyright">© 2026 Bohemia Interactive a.s. Bohemia Interactive® is a registered trademark of Bohemia Interactive a.s. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
