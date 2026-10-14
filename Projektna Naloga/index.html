@@ -22,49 +22,50 @@
 
         <p id="or">OR</p>
 
-        <form id="registration" novalidate>
-            <input class="input" id="nickname" name="nickname" type="text" placeholder="Nickname" autocomplete="username" required>
-            <small id="nickname-error"></small>
+        <form id="registration">
 
-            <input class="input" id="email" name="email" type="email" placeholder="E-mail" autocomplete="email" required>
-            <small id="email-error"></small>
+    <input class="input" id="nickname" name="nickname"
+        type="text" placeholder="Nickname" autocomplete="username" required>
 
-            <input class="input space" id="email2" name="email2" type="email" placeholder="E-mail Confirmation" autocomplete="off" required>
-            <small id="email2-error"></small>
+    <input class="input" id="email" name="email"
+        type="email" placeholder="E-mail" autocomplete="email" required>
 
-            <input class="input" id="password" name="password" type="password" placeholder="Password" autocomplete="new-password" minlength="8" required>
-            <small id="password-error"></small>
+    <input class="input space" id="email2" name="email2"
+        type="email" placeholder="E-mail Confirmation" required>
 
-            <div class="strength" aria-label="Password strength">
-                <span></span><span></span><span></span><span></span><span></span>
-            </div>
+    <input class="input" id="password" name="password"
+        type="password" placeholder="Password" minlength="8" required>
 
-            <input class="input" id="password2" name="password2" type="password" placeholder="Password Confirmation" autocomplete="new-password" required>
-            <small id="password2-error"></small>
+    <div class="strength">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
 
-            <div class="remember">
-                <label class="switch" aria-label="Accept the terms">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <span class="slider round"></span>
-                </label>
-                <span class="remember-text">
-                    By creating a Bohemia Interactive Account,<br>
-                    you accept the
-                    <a href="https://accounts.bistudio.com/terms-and-conditions" target="_blank" rel="noopener noreferrer">User Agreement</a>
-                    &amp;
-                    <a href="https://www.bohemia.net/en/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
-                </span>
-            </div>
-            <small id="terms-error"></small>
+    <input class="input" id="password2" name="password2"
+        type="password" placeholder="Password Confirmation" minlength="8" required>
 
-            <button id="signup" type="submit">SIGN UP</button>
-            <p id="message" role="status" aria-live="polite"></p>
-        </form>
+    <div class="remember">
+        <label class="switch">
+            <input type="checkbox" id="terms" name="terms" required>
+            <span class="slider round"></span>
+        </label>
+
+        <span class="remember-text">
+            By creating a Bohemia Interactive Account,<br>
+            you accept the
+            <a href="https://accounts.bistudio.com/terms-and-conditions" target="_blank">User Agreement</a>
+            &amp;
+            <a href="https://www.bohemia.net/en/privacy-policy" target="_blank">Privacy Policy</a>.
+        </span>
+    </div>
+
+    <button id="signup" type="submit">SIGN UP</button>
+
+</form>
     </div>
 
     <div id="bottom">
         <hr>
-        <a href="https://accounts.bistudio.com/auth/login">ALREADY HAVE AN ACCOUNT?</a>
+        <a href="">ALREADY HAVE AN ACCOUNT?</a>
         <hr>
     </div>
 
