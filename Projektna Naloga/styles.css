@@ -10,14 +10,14 @@ body {
 
 #glav_slika {
     display: block;
-    width: 200px;
-    height: 80px;
-    object-fit: contain;
+    width: 220px;
+    height: 100px;
+
     margin: 18px auto 30px;
 }
 
 #glavni {
-    width: 430px;
+    width: 420px;
     max-width: calc(100% - 24px);
     padding: 32px;
     margin: auto;
@@ -29,7 +29,7 @@ body {
     font-size: 17px;
     font-weight: bold;
     text-align: center;
-    margin: 0 0 24px;
+    margin: 0 0 27px;
 }
 
 .social {
@@ -45,18 +45,17 @@ body {
     border: none;
 }
 
-.social i,
-.google-icon {
-    display: inline-block;
-    width: 28px;
-    font-size: 18px;
+.social-icon {
+    width: 24px;
+    height: 24px;
+    
     vertical-align: middle;
+    margin-right: 12px;
 }
 
 #steam { background-color: #53565a; color: white; }
 #face { background-color: #4267b2; color: white; }
 #goog { background-color: white; color: #333; border: 1px solid #53565a; }
-.google-icon { color: #4285f4; font-weight: bold; }
 
 #or {
     display: flex;
@@ -67,7 +66,14 @@ body {
     text-align: center;
 }
 
-#or::before, #or::after {
+#or:before {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background-color: #e5e5e5;
+}
+
+#or:after {
     content: "";
     height: 1px;
     flex: 1;
@@ -79,47 +85,32 @@ body {
     width: 100%;
     height: 54px;
     border: 2px solid #999;
-    padding: 0 16px;
-    font-size: 15px;
+    padding: 0 15px;
+    font-size: 16px;
     margin-top: 16px;
     outline: none;
 }
 
 .input::placeholder { color: #677284; }
 .input:focus { border-color: #6cac37; }
-.input.red { border-color: #e00010; }
-
-small {
-    display: block;
-    color: #ef7b85;
-    font-size: 12px;
-    margin-top: 8px;
-    line-height: 1.4;
-}
-
-small:empty { display: none; }
-
-.space { margin-top: 30px; }
 
 .strength {
     display: flex;
     gap: 4px;
-    margin-top: 15px;
-    margin-bottom: 40px;
+    margin-top: 17px;
+    margin-bottom: 41px;
 }
 
 .strength span {
     flex: 1;
-    height: 3px;
+    height: 4px;
     background-color: #ddd;
 }
-
-.strength span.active { background-color: #64aa34; }
 
 .remember {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 17px;
     margin-top: 46px;
     margin-bottom: 37px;
 }
@@ -169,8 +160,6 @@ small:empty { display: none; }
 .switch input:checked + .slider:before { background-color: #75bc42; transform: translateX(23px); }
 .switch input:focus-visible + .slider { outline: 2px solid #6ba539; outline-offset: 3px; }
 
-#terms-error { margin: -26px 0 25px; }
-
 #signup {
     display: block;
     margin: 0 auto;
@@ -185,16 +174,6 @@ small:empty { display: none; }
 
 #signup:hover { background-color: #51952a; }
 
-#message {
-    font-size: 12px;
-    text-align: center;
-    color: #4b9c25;
-    margin: 12px 0 0;
-}
-
-#message:empty { display: none; }
-
-/* SPODNJA PRIJAVA */
 #bottom {
     width: 430px;
     max-width: calc(100% - 24px);
@@ -235,7 +214,6 @@ small:empty { display: none; }
 #footer-links a,
 #eu-text a {
     color: white;
-    text-decoration: none;
     transition: color .15s;
 }
 
@@ -259,7 +237,6 @@ small:empty { display: none; }
 #europe img {
     width: 160px;
     height: 107px;
-    object-fit: cover;
 }
 
 #eu-text {
@@ -279,16 +256,3 @@ small:empty { display: none; }
     margin: 70px 12px 22px;
 }
 
-@media (max-width: 480px) {
-    #glavni { padding: 22px; }
-    .input { height: 42px; font-size: 12px; }
-    .social { height: 40px; font-size: 11px; }
-    #europe { gap: 12px; }
-    #europe img { width: 120px; height: 80px; }
-    #eu-text { gap: 14px; }
-    #eu-text a { font-size: 10px; }
-    #footer-links { gap: 16px; }
-    #footer-links a { font-size: 12px; }
-    #bottom { gap: 8px; }
-    #bottom a { font-size: 10px; padding: 10px 12px; }
-}
