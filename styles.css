@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0;
+    background-color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#glav_slika{
+    display: block;
+    width: 220px;
+    height: 100px;
+
+    margin: 19px auto 30px;
+}
+
+#glavni{
+    width: 420px;
+    max-width: 95%;
+    padding: 35px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 1px 4px #d6d6d6;
+}
+
+#sign_text{
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 27px;
+}
+
+
+.social{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-left: 17px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    gap: 12px;
+}
+
+.social-icon{
+    width: 24px;
+    height: 24px;
+}
+
+#steam{ background-color: #53565a; color: white; }
+#face{ background-color: #4267b2; color: white; }
+#goog{ background-color: white; color: #333; border: 1px solid #53565a; }
+
+#or{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 28px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+#or:before{
+    content: "";
+    height: 1px;
+    flex: 1;
+    background-color: #e5e5e5;
+}
+
+#or:after{
+    content: "";
+    height: 1px;
+    flex: 1;
+    background-color: #e5e5e5;
+}
+
+.input{
+    display: block;
+    width: 100%;
+    height: 54px;
+    border: 2px solid #999;
+    padding: 0 15px;
+    font-size: 16px;
+    margin-top: 16px;
+    outline: none;
+}
+
+.input::placeholder{ color: #677284; }
+.input:focus{ border-color: #6cac37; }
+
+.strength{
+    display: flex;
+    gap: 4px;
+    margin-top: 17px;
+    margin-bottom: 41px;
+}
+
+.strength span{
+    flex: 1;
+    height: 4px;
+    background-color: #ddd;
+}
+
+.spodnji_reg{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 46px;
+    margin-bottom: 37px;
+}
+
+.terms{
+    font-size: 12px;
+    line-height: 19px;
+}
+
+.terms a{
+    color: #687586;
+    text-decoration: none;
+}
+
+.terms a:hover{ color: #64a62f; text-decoration: underline; }
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    min-width: 51px;
+    height: 27px;
+}
+
+.switch input{ opacity: 0; width: 0; height: 0; }
+
+.slider{
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ffcbd6;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    width: 20px; height: 20px;
+    left: 4px; bottom: 3px;
+    background-color: #ff6388;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.switch input:checked + .slider{ background-color: #b6dc9c; }
+.switch input:checked + .slider:before{ background-color: #75bc42; transform: translateX(23px); }
+.switch input:focus-visible + .slider{ outline: 2px solid #6ba539; outline-offset: 3px; }
+
+#signup{
+    display: block;
+    margin: 0 auto;
+    padding: 14px 17px;
+    background-color: #65ad36;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px #d2d2d2;
+}
+
+#signup:hover{ background-color: #51952a; }
+
+#spodnji{
+    width: 430px;
+    max-width: 95%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 35px auto 0;
+}
+
+#spodnji hr{
+    flex: 1;
+    min-width: 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+#spodnji a{
+    display: block;
+    background-color: #65ad36;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 11px 25px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#spodnji a:hover{ background-color: #51952a; }
+
+#links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 50px auto 65px;
+}
+
+#links a,
+#eu-text a{
+    color: white;
+    transition: color .15s;
+}
+
+#links a{ font-size: 14px; }
+
+#links a:hover,
+#links a:focus-visible,
+#eu-text a:hover,
+#eu-text a:focus-visible{
+    color: #62a92f;
+    text-decoration: underline;
+}
+
+#eu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#eu img{
+    width: 160px;
+    height: 107px;
+}
+
+#eu-text{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+#eu-text a{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#copyright{
+    font-size: 12px;
+    text-align: center;
+    margin: 70px 12px 22px;
+}
+
