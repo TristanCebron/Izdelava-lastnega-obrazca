@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bohemia Account</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="slike/bi-logo-rainbow-black-RGB.svg">
 </head>
 <body>
@@ -15,36 +14,55 @@
     <div id="glavni">
         <p id="sign_text">Create new Account</p>
 
-        <button id="steam" class="social" type="button"><i class="fa-brands fa-steam"></i> Sign in with Steam</button>
-        <button id="face" class="social" type="button"><i class="fa-brands fa-facebook"></i> Sign in with Facebook</button>
-        <button id="goog" class="social" type="button"><span class="google-icon">G</span> Sign in with Google</button>
+        <button id="steam" class="social" type="button">
+            <img src="slike/Steam_icon_logo.png" class="social-icon" alt="">
+            Sign in with Steam
+        </button>
+        
+        <button id="face" class="social" type="button">
+            <img src="slike/facebook.png" class="social-icon" alt="">
+            Sign in with Facebook
+        </button>
+        
+        <button id="goog" class="social" type="button">
+            <img src="slike/Google__G__logo.png" class="social-icon" alt="">
+            Sign in with Google
+        </button>
+
 
         <p id="or">OR</p>
 
         <form id="registration">
 
-    <input class="input" id="nickname" name="nickname"
-        type="text" placeholder="Nickname" autocomplete="username" required>
+    <input class="input" id="nickname" name="nickname" type="text" placeholder="Nickname" autocomplete="username" required>
 
-    <input class="input" id="email" name="email"
-        type="email" placeholder="E-mail" autocomplete="email" required>
+    <br>
 
-    <input class="input space" id="email2" name="email2"
-        type="email" placeholder="E-mail Confirmation" required>
+    <input class="input" id="email" name="email" type="email" placeholder="E-mail" autocomplete="email" required>
 
-    <input class="input" id="password" name="password"
-        type="password" placeholder="Password" minlength="8" required>
+    <br>
+
+    <input class="input space" id="email2" name="email2" type="email" placeholder="E-mail Confirmation" required>
+
+    <br>
+
+    <input class="input" id="password" name="password" type="password" placeholder="Password" minlength="8" required>
+
+    <br>
 
     <div class="strength">
-        <span></span><span></span><span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
-    <input class="input" id="password2" name="password2"
-        type="password" placeholder="Password Confirmation" minlength="8" required>
+    <input class="input" id="password2" name="password2" type="password" placeholder="Password Confirmation" minlength="8" required>
 
     <div class="remember">
         <label class="switch">
-            <input type="checkbox" id="terms" name="terms" required>
+            <input type="checkbox" id="terms" name="terms" required> 
             <span class="slider round"></span>
         </label>
 
@@ -76,7 +94,7 @@
         </div>
 
         <div id="europe">
-            <img src="slike/eu-flag.svg" alt="European Union flag">
+            <img src="slike/eu-flag.svg" alt="European flag">
             <div id="eu-text">
                 <a href="https://european-union.europa.eu/" target="_blank" rel="noopener noreferrer">EVROPSKÁ UNIE</a>
                 <a href="https://ec.europa.eu/regional_policy/" target="_blank" rel="noopener noreferrer">Evropský fond pro regionální rozvoj</a>
