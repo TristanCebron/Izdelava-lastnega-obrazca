@@ -35,3 +35,9 @@ Spletna stran je namenjena šolski nalogi. Registracijski obrazec omogoča osnov
 
 Povezava do projekta: [Bohemia Interactive – registracijska stran](https://github.com/TristanCebron/Izdelava-lastnega-obrazca)
 
+## Spletna stran
+
+Projekt je objavljen tudi na GitHub Pages.
+
+**Povezava do spletne strani:** [Bohemia Interactive – registracijska stran](https://tristancebron.github.io/Izdelava-lastnega-obrazca/)
+
